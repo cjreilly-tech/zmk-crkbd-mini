@@ -13,7 +13,7 @@
 #define NAV 1
 #define SYM 2
 #define ADJ 3
-#define EXTRA 4
+#define MOUSE 4
 
 / {
         chosen {
@@ -87,18 +87,18 @@
                         bindings = <
    &kp F1        &kp F2         &kp F3        &kp F4      &kp F5            &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
    &hm LGUI F11  &hm LSHFT F12  &trans        &trans      &studio_unlock            &trans  &trans  &trans  &trans  &trans
-   &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &kp CAPS  &trans  &trans  &trans  &bootloader
+   &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_CLR  &bt BT_CLR_ALL    &kp CAPS  &to 4   &trans  &trans  &bootloader
                            &trans        &trans      &trans            &trans  &trans  &trans
                         >;     
 
                 };
 
-                EXTRA {
-                        display-name = "Extra";
+                MOUSE {
+                        display-name = "Mouse";
                         bindings = <
 
-   &trans       &trans         &mmv MOVE_UP       &trans      &msc SCRL_UP    &trans  &trans  &trans  &trans  &trans
-   &trans       &mmv MOVE_LEFT &mmv MOVE_DOWN     &mmv MOVE_RIGHT   &msc SCRL_DOWN            &trans  &trans  &trans  &trans  &trans
+   &to 0        &trans         &trans            &trans      &trans         &trans  &trans  &trans  &trans  &trans
+   &trans       &mkp LCLK      &mkp MCLK         &mkp RCLK   &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
    &trans       &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                       &trans        &trans      &trans            &trans  &trans  &trans
 
